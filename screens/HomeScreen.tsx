@@ -20,15 +20,25 @@ export default function HomeScreen({ navigation }) {
           justifyContent: "center",
         }}
       >
-        <View>
-          <Text>Burger App</Text>
+        <View style={{ height: "50%" }}>
+          <Text style={{ color: "#fff", fontSize: 62 }}>Burger App</Text>
         </View>
-        <View>
-          <TouchableOpacity onPress={() => navigation.navigate("Signin")}>
-            <Text>SIGN IN</Text>
+        <View style={{ height: "15%", justifyContent: "space-evenly" }}>
+          <TouchableOpacity
+            style={styles.touchableContainer}
+            onPress={() => navigation.navigate("Signin")}
+          >
+            <Text style={{ color: "#fff", fontSize: 24, textAlign: "center" }}>
+              SIGN IN
+            </Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate("Signup")}>
-            <Text>REGISTER</Text>
+          <TouchableOpacity
+            style={styles.touchableContainer}
+            onPress={() => navigation.navigate("Signup")}
+          >
+            <Text style={{ color: "#fff", fontSize: 24, textAlign: "center" }}>
+              REGISTER
+            </Text>
           </TouchableOpacity>
         </View>
       </ImageBackground>
@@ -42,5 +52,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  touchableContainer: {
+    backgroundColor: "#000",
+    padding: 10,
+    borderRadius: 10,
   },
 });
